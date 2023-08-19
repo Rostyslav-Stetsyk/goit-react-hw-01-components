@@ -7,13 +7,12 @@ import {
   StatList,
   Title,
 } from './Statistics.styled';
-
-const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
+import { randomColor } from 'utils/randomColor';
 
 export const Statistics = ({ title, stats }) => {
   return (
     <SectionStatistics>
-      {{ title } && <Title>{title}</Title>}
+      {title && <Title>{title}</Title>}
       <StatList>
         {stats.map((el, _, arr) => {
           return (
